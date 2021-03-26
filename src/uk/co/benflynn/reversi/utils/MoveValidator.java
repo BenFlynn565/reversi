@@ -194,6 +194,8 @@ public class MoveValidator {
 			for(southInt = row+1; southInt >= 7; southInt++) {
 				if(main.board[southInt][col] == 0 || main.board[southInt][col] == 1) {
 					break;
+					
+					//test
 				}
 			}
 		}
