@@ -6,15 +6,13 @@ import java.awt.Graphics;
 
 import javax.swing.JButton;
 
-
 public class WhiteButton extends JButton {
 
 	private static final long serialVersionUID = 1L;
-	
-	Color borderColor;
-	Color buttonColor;
-	int borderSize;
-	
+	private Color borderColor;
+	private Color buttonColor;
+	private int borderSize;
+
 	public WhiteButton(int width, int height, Color color, int borderWidth, Color borderCol) {
 		setMinimumSize(new Dimension(width, height));
 		setPreferredSize(new Dimension(width, height));
@@ -23,7 +21,6 @@ public class WhiteButton extends JButton {
 		buttonColor = color;
 		borderColor = borderCol;
 	}
-	
 
 	protected void paintComponent(Graphics graphics) {
 		if (borderColor != null) {
@@ -32,9 +29,7 @@ public class WhiteButton extends JButton {
 		}
 		if (buttonColor != null) {
 			graphics.setColor(new Color(0, 255, 0));
-			graphics.fillRect( borderSize, borderSize,
-				getWidth()-borderSize*2,
-				getHeight()-borderSize*2 );
+			graphics.fillRect(borderSize, borderSize, getWidth() - borderSize * 2, getHeight() - borderSize * 2);
 			graphics.setColor(Color.WHITE);
 			graphics.fillOval(5, 3, 50, 50);
 			graphics.setColor(Color.BLACK);

@@ -9,11 +9,10 @@ import javax.swing.JButton;
 public class BoardButton extends JButton {
 
 	private static final long serialVersionUID = 1L;
-	
-	Color borderColor;
-	Color buttonColor;
-	int borderSize;
-	
+	private Color borderColor;
+	private Color buttonColor;
+	private int borderSize;
+
 	public BoardButton(int width, int height, Color color, int borderWidth, Color borderCol) {
 		setMinimumSize(new Dimension(width, height));
 		setPreferredSize(new Dimension(width, height));
@@ -22,11 +21,11 @@ public class BoardButton extends JButton {
 		buttonColor = color;
 		borderColor = borderCol;
 	}
-	
+
 	public BoardButton(int width, int height, Color color) {
 		this(width, height, color, 0, null);
 	}
-	
+
 	protected void paintComponent(Graphics graphics) {
 		if (borderColor != null) {
 			graphics.setColor(borderColor);
@@ -34,9 +33,7 @@ public class BoardButton extends JButton {
 		}
 		if (buttonColor != null) {
 			graphics.setColor(buttonColor);
-			graphics.fillRect( borderSize, borderSize,
-				getWidth()-borderSize*2,
-				getHeight()-borderSize*2 );
+			graphics.fillRect(borderSize, borderSize, getWidth() - borderSize * 2, getHeight() - borderSize * 2);
 		}
 
 	}
