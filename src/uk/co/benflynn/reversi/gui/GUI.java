@@ -7,6 +7,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -204,7 +205,9 @@ public class GUI {
 		whiteFrame.add(whiteStatus, BorderLayout.NORTH);
 		whiteFrame.add(whiteBoardPanel);
 		whiteFrame.add(whiteAI, BorderLayout.SOUTH);
-
+		
+		blackFrame.setIconImage(new ImageIcon("res/icon.png").getImage());
+		whiteFrame.setIconImage(new ImageIcon("res/icon.png").getImage());
 		blackFrame.setVisible(true);
 		whiteFrame.setVisible(true);
 		reversi.gameState = 1;
