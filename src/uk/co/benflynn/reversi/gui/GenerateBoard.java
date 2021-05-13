@@ -35,6 +35,8 @@ public class GenerateBoard {
 		}
 
 	}
+	
+	
 
 	private int northSearch(int buttonRow, int buttonCol, int opposite, int col) {
 		int north = 0;
